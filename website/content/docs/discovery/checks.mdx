@@ -17,36 +17,36 @@ to get a more complete example on how to leverage health check capabilities in C
 A check is defined in a configuration file or added at runtime over the HTTP interface. Checks
 created via the HTTP interface persist with that node.
 
-There are several different kinds of checks:
+There are severeal types of checks:
 
-- `Script + Interval` ((###script-check))- These checks depend on invoking an external application
+- `Script + Interval` ((#script-check))- These checks depend on invoking an external application
   that performs the health check.
 
-- `HTTP + Interval` ((###http-check))- These checks make an HTTP `GET` request to the specified URL 
+- `HTTP + Interval` ((#http-check))- These checks make an HTTP `GET` request to the specified URL 
   in the health check definition.
   
-- `TCP + Interval` ((###tcp-check))- These checks make a TCP connection attempt to the specified
+- `TCP + Interval` ((#tcp-check))- These checks make a TCP connection attempt to the specified
   IP/hostname and port in the health check defintion.
 
-- `UDP + Interval` ((###udp-check))- These checks direct the client to periodically send UDP datagrams
+- `UDP + Interval` ((#udp-check))- These checks direct the client to periodically send UDP datagrams
   to the specified IP/hostname and port in the health check definition.
   
-- `OSService + Interval` ((###osservice-check))- These checks periodically direct the Consul agent to monitor
+- `OSService + Interval` ((#osservice-check))- These checks periodically direct the Consul agent to monitor
   the health of a service running on the host operating system
 
-- `Time to Live (TTL)` ((###time-to-live-(ttl)-check))- These checks retain their last known state
+- `Time to Live (TTL)` ((#time-to-live-(ttl)-check))- These checks retain their last known state
   for a given TTL.
   
-- `Docker + Interval` ((###docker-check))- These checks depend on invoking an external application which
+- `Docker + Interval` ((#docker-check))- These checks depend on invoking an external application which
   is packaged within a Docker Container.
 
-- `gRPC + Interval` ((###grpc-check))- These checks are intended for applications that support the standard
+- `gRPC + Interval` ((#grpc-check))- These checks are intended for applications that support the standard
   [gRPC health checking protocol](https://github.com/grpc/grpc/blob/master/doc/health-checking.md).
 
-- `H2ping + Interval` ((###h2ping-check))- These checks test an endpoint that uses http2
+- `H2ping + Interval` ((#h2ping-check))- These checks test an endpoint that uses http2
   by connecting to the endpoint and sending a ping frame.
 
-- `Alias` ((###alias-check))- These checks alias the health state of another registered
+- `Alias` ((#alias-check))- These checks alias the health state of another registered
   node or service.
 
 
